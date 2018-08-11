@@ -1,0 +1,5 @@
+<mat-card class="paper" *ngIf="post">
+  <h1>{{post.title}}</h1>
+  <p>{{post.body}}</p>
+  <button class="return" (click)="returnPage()" mat-icon-button style="background-color: lightblue">&#11013;</button>
+</mat-card>

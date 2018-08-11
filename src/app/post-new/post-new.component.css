@@ -1,0 +1,29 @@
+button {
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    position: fixed;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+button.return{
+    left: 20px;
+}
+
+button.send{
+    right: 20px;
+}
+
+.title{
+    width: 60% !important;
+    margin: auto;
+    display: block;
+}
+
+.body{
+    display: block;
+    margin: auto;
+    width: 60% !important;
+    height: 60% !important;
+}

@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-toolbar style="background-color: rgb(214, 214, 214)">  
+  <span>Anonpost</span>
+</mat-toolbar>
+<br>
+
+<div *ngIf="showIndex">
+  <div *ngFor="let post of posts">
+    <mat-card (click)='selected_post = post; showIndex = false;'>
+      <mat-card-title>{{post.title}}</mat-card-title>
+      <mat-card-content>{{(post.body.length > 100) ? ((post.body | slice:0:100) + "...") : post.body}}</mat-card-content>
+    </mat-card><br>
+  </div>
+  <button class="add" (click)="setCreatorPage()" mat-icon-button style="background-color: lightblue">+</button>
+</div>
+<app-post-read (onBackEvent)="setIndex()" [post]="selected_post"></app-post-read>
+<app-post-new *ngIf="showCreatorPage" (onCreatePost)="createPost($event)" (onBackEvent)="setIndex()"></app-post-new>
