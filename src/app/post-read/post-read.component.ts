@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Post } from '../Post.class'
+import { Post } from '../Post.class';
 
 @Component({
   selector: 'app-post-read',
@@ -7,7 +7,7 @@ import { Post } from '../Post.class'
   styleUrls: ['./post-read.component.css']
 })
 export class PostReadComponent implements OnInit {
-  @Input() post;
+  @Input() post: Post;
   @Output() onBackEvent = new EventEmitter();
 
   constructor() { 
